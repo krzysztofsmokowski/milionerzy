@@ -46,7 +46,7 @@ def game_input(randomized_question):
         print("gratuluje bryanku! to poprawna odpowiedz, czy chcesz grac dalej?")
         cont = input("Napisz Tak jesli chcesz kontynuowac gre")
         if cont != "Tak" or "tak":
-            return True
+            return False
 
 def main():
     loaded_filenames = files_list()
@@ -58,6 +58,7 @@ def main():
     while game == True:
         quest = get_random_question(appender)
         game = game_input(quest)
+        print(game)
 
 if __name__ == "__main__":
     main()
